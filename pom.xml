@@ -9,6 +9,7 @@
   <version>1.0</version>
   <packaging>war</packaging>
 
+
   <name>developerresume Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -19,6 +20,13 @@
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
+    <!-- Inherit defaults from Spring Boot -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.5.RELEASE</version>
+    </parent>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -26,12 +34,26 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+      <!-- Add typical dependencies for a web application -->
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-web</artifactId>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-thymeleaf</artifactId>
+      </dependency>
   </dependencies>
 
   <build>
     <finalName>developerresume</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+          <!-- Package as an executable jar -->
+          <plugin>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-maven-plugin</artifactId>
+          </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
