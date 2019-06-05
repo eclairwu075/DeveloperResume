@@ -12,7 +12,6 @@ body {
     color: #8b8b8b; }
     #home-container #tab-container .title {
       flex: 2;
-      text-align: left;
       color: orange;
       font-size: 50px;
       padding-top: 0; }
