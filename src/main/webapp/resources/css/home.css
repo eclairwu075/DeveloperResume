@@ -1,0 +1,28 @@
+body {
+  background-color: #333;
+  color: white;
+  font-family: Microsoft JhengHei, serif; }
+
+#home-container {
+  width: 950px;
+  margin: auto; }
+  #home-container #tab-container {
+    display: flex;
+    font-size: 30px;
+    color: #8b8b8b; }
+    #home-container #tab-container .title {
+      flex: 2;
+      text-align: left;
+      color: orange;
+      font-size: 50px;
+      padding-top: 0; }
+    #home-container #tab-container .tab {
+      flex: 1;
+      text-align: center;
+      padding-top: 50px; }
+  #home-container #content-container {
+    border: 1px solid;
+    height: 500px;
+    padding: 10px; }
+
+/*# sourceMappingURL=home.css.map */
