@@ -3,7 +3,7 @@
  *
  */
 
-home.skill = (function () {
+home.content.skill = (function () {
 
     var configMap = {
 

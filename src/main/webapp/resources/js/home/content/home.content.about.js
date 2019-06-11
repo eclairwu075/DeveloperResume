@@ -3,7 +3,7 @@
  *
  */
 
-home.about = (function () {
+home.content.about = (function () {
 
     var configMap = {
 

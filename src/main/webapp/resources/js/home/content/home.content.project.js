@@ -3,7 +3,7 @@
  *
  */
 
-home.project = (function () {
+home.content.project = (function () {
 
     var configMap = {
 

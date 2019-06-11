@@ -1,33 +1,45 @@
 body {
-    background-color:#333;
-    color:white;
+    background-color: #333;
+    color: white;
     font-family: Microsoft JhengHei, serif;
 }
 
 #home-container {
     width: 950px;
-    margin:auto;
-    #tab-container{
+    margin: auto;
+    #tab-container {
         display: flex;
-        font-size:30px;
-        color:#8b8b8b;
+        font-size: 30px;
+        color: #8b8b8b;
         .title {
-            flex:2;
-            color:orange;
-            font-size:50px;
-            padding-top:0;
+            flex: 2;
+            color: orange;
+            font-size: 50px;
+            padding-top: 0;
         }
-        .tab{
+        .tab {
             flex: 1;
             text-align: center;
-            padding-top:50px;
+            padding-top: 50px;
+            &.active {
+                color: white;
+            }
         }
     }
-    #content-container{
-        border:1px solid;
+    #content-container {
+        border: 1px solid;
         height: 500px;
         padding: 10px;
     }
+    #go-message-board-icon-container {
+        position: fixed;
+        bottom: 30px;
+        right: 10px;
+        img {
+            width: 48px;
+        }
+    }
+
 }
 
 

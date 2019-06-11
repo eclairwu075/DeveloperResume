@@ -19,9 +19,17 @@ body {
       flex: 1;
       text-align: center;
       padding-top: 50px; }
+      #home-container #tab-container .tab.active {
+        color: white; }
   #home-container #content-container {
     border: 1px solid;
     height: 500px;
     padding: 10px; }
+  #home-container #go-message-board-icon-container {
+    position: fixed;
+    bottom: 30px;
+    right: 10px; }
+    #home-container #go-message-board-icon-container img {
+      width: 48px; }
 
 /*# sourceMappingURL=home.css.map */

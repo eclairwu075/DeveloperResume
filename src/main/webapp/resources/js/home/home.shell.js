@@ -5,24 +5,23 @@
 home.shell = (function () {
 
     var configMap = {
-        main_html: '<div id="tab-container"></div><div id="content-container"></div>',
+        main_html: '<div id="tab-container"></div><div id="content-container"></div><div id="go-message-board-icon-container"></div>',
         title_html: '<div class="title">吳怡賢</div>',
         tab_html: '<div class="tab"></div>',
-        homeContent_html: '<div class="home-content">HOME CONTENT</div>',
-        //aboutContent_html: '<div class="about-content">ABOUT ME</div>',
-        //skillContent_html: '<div class="skill-content">SKILLS</div>',
-        //projectContent_html: '<div class="project-content">PROJECT</div>',
+        goMessageBoardIcon_html: '<img id="messageboard" src="/resources/img/home/messageboardiconblack.png"/>',
         tabs: [{tabName: "About", id: "about"}, {tabName: "Skill", id: "skill"}, {tabName: "Project", id: "project"}]
     }, jqueryMap = {
         $container: null,
         $tabContainer: null,
-        $contentContainer: null
-    }, init, setJqueryMap, renderTab, renderContent, onTabClick;
+        $contentContainer: null,
+        $goMessageBoardIconContainer: null
+    }, init, setJqueryMap, renderTab, renderGoMessageBoardIcon, onTitleClick, onTabClick, onImgClick, changeContent, changeMessageBoardIcon;
 
     setJqueryMap = function ($container) {
         jqueryMap.$container = $container;
         jqueryMap.$tabContainer = $container.find("#tab-container");
         jqueryMap.$contentContainer = $container.find("#content-container");
+        jqueryMap.$goMessageBoardIconContainer = $container.find("#go-message-board-icon-container")
     };
 
     renderTab = function () {
@@ -36,25 +35,57 @@ home.shell = (function () {
         })
     };
 
-    renderContent = function () {
-        var $content = $(configMap.homeContent_html);
-        jqueryMap.$contentContainer.html($content);
+    renderGoMessageBoardIcon = function () {
+        var $icon = $(configMap.goMessageBoardIcon_html);
+        $icon.data("id", "messageboard");
+        jqueryMap.$goMessageBoardIconContainer.html($icon);
+    };
+
+    onTitleClick = function () {
+        home.content.shell.init(jqueryMap.$contentContainer);
+        $(this).siblings().removeClass("active");
+        changeMessageBoardIcon(false);
     };
 
     onTabClick = function () {
         var $this = $(this);
-        var contentId=$this.data("id");
-        home[contentId].init(jqueryMap.$contentContainer);
-        //jqueryMap.$contentContainer.html(configMap[$this.data("id")+"Content_html"]);
-        console.log($this.data("id"));
+        changeContent($this);
+
+        $this.siblings().removeClass("active");
+        $this.addClass("active");
+        changeMessageBoardIcon(false);
+    };
+
+    onImgClick = function () {
+        var $this = $(this);
+        changeContent($this);
+        jqueryMap.$tabContainer.find(".active").removeClass("active");
+        changeMessageBoardIcon(true);
+    };
+
+    changeMessageBoardIcon = function (isActive) {
+        if (isActive) {
+            jqueryMap.$goMessageBoardIconContainer.find("img").attr("src", "/resources/img/home/messageboardiconwhite.png");
+        } else {
+            jqueryMap.$goMessageBoardIconContainer.find("img").attr("src", "/resources/img/home/messageboardiconblack.png");
+        }
+    };
+
+    changeContent = function ($this) {
+        var contentId = $this.data("id");
+        console.log(contentId);
+        home.content.shell.changeContentByKey(contentId);
     };
 
     init = function ($container) {
         $container.html(configMap.main_html);
         setJqueryMap($container);
         renderTab();
-        renderContent();
+        home.content.shell.init(jqueryMap.$contentContainer);
+        renderGoMessageBoardIcon();
+        jqueryMap.$tabContainer.on("click", ".title", onTitleClick);
         jqueryMap.$tabContainer.on("click", ".tab", onTabClick);
+        jqueryMap.$goMessageBoardIconContainer.on("click", "img", onImgClick);
     };
 
     return {init: init}
