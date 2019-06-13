@@ -7,7 +7,7 @@ home.content.skill = (function () {
 
     var configMap = {
 
-        main_html: '<div class="skill-content">skill!!</div>'
+        main_html: '<div class="skill-container">skill!!</div>'
     }, init;
 
     init = function ($container) {

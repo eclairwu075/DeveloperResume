@@ -25,6 +25,53 @@ body {
     border: 1px solid;
     height: 500px;
     padding: 10px; }
+    #home-container #content-container .message-board-container .writing-wrapper .title {
+      height: 65px;
+      background-color: gray;
+      line-height: 65px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold; }
+    #home-container #content-container .message-board-container .writing-wrapper .writing-container {
+      position: relative;
+      padding: 10px 0 0 30px; }
+      #home-container #content-container .message-board-container .writing-wrapper .writing-container .name {
+        height: 30px;
+        width: 200px;
+        margin-bottom: 5px;
+        background-color: #5a5b64;
+        color: gray;
+        padding-left: 10px; }
+      #home-container #content-container .message-board-container .writing-wrapper .writing-container .content {
+        height: 150px;
+        width: 800px;
+        background-color: #5a5b64;
+        color: gray;
+        padding-left: 10px; }
+      #home-container #content-container .message-board-container .writing-wrapper .writing-container .submit-btn {
+        position: absolute;
+        bottom: 0;
+        right: 0; }
+    #home-container #content-container .message-board-container .writing-wrapper .gray-block {
+      height: 20px;
+      margin: 10px 0 10px 0;
+      background-color: gray; }
+    #home-container #content-container .message-board-container .message-container {
+      padding: 10px;
+      position: relative;
+      border-bottom: 1px solid; }
+      #home-container #content-container .message-board-container .message-container .name {
+        display: inline; }
+      #home-container #content-container .message-board-container .message-container .date {
+        display: inline-block;
+        margin-left: 50px;
+        font-size: 16px; }
+      #home-container #content-container .message-board-container .message-container .content {
+        margin: 10px 0 0 0; }
+      #home-container #content-container .message-board-container .message-container .reply-btn {
+        position: absolute;
+        right: 0;
+        bottom: 10px; }
   #home-container #go-message-board-icon-container {
     position: fixed;
     bottom: 30px;

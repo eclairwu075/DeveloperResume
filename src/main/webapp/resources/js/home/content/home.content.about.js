@@ -7,7 +7,7 @@ home.content.about = (function () {
 
     var configMap = {
 
-        main_html: '<div class="about-content">ABOUT ME</div>'
+        main_html: '<div class="about-container">ABOUT ME</div>'
     }, init;
 
     init = function ($container) {

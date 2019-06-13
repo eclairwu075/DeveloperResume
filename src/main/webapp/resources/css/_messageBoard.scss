@@ -1,0 +1,65 @@
+.message-board-container {
+    .writing-wrapper {
+        .title {
+            height: 65px;
+            background-color: gray;
+            line-height: 65px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .writing-container {
+            position: relative;
+            padding: 10px 0 0 30px;
+
+            .name {
+                height: 30px;
+                width: 200px;
+                margin-bottom: 5px;
+                background-color: #5a5b64;
+                color: gray;
+                padding-left: 10px;
+            }
+            .content {
+                height: 150px;
+                width: 800px;
+                background-color: #5a5b64;
+                color: gray;
+                padding-left: 10px;
+            }
+            .submit-btn {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+
+        .gray-block {
+            height: 20px;
+            margin: 10px 0 10px 0;
+            background-color: gray;
+        }
+    }
+    .message-container {
+        padding: 10px;
+        position: relative;
+        border-bottom: 1px solid;
+        .name {
+            display: inline;
+        }
+        .date {
+            display: inline-block;
+            margin-left: 50px;
+            font-size: 16px;
+        }
+        .content {
+            margin: 10px 0 0 0;
+        }
+        .reply-btn {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+    }
+}

@@ -17,7 +17,11 @@ home.content.shell = (function () {
     };
 
     changeContentByKey = function (key) {
-        home.content[key].init(jqueryMap.$container);
+        if (key == "messageBoard") {
+            home.content.messageBoard.shell.init(jqueryMap.$container);
+        } else {
+            home.content[key].init(jqueryMap.$container);
+        }
     };
 
     init = function ($container) {

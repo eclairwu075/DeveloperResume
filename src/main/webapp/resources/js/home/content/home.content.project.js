@@ -7,7 +7,7 @@ home.content.project = (function () {
 
     var configMap = {
 
-        main_html: '<div class="project-content">project!project!project!</div>'
+        main_html: '<div class="project-container">project!project!project!</div>'
     }, init;
 
     init = function ($container) {

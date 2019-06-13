@@ -30,6 +30,7 @@ body {
         border: 1px solid;
         height: 500px;
         padding: 10px;
+        @import "messageBoard";
     }
     #go-message-board-icon-container {
         position: fixed;

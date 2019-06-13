@@ -8,7 +8,7 @@ home.shell = (function () {
         main_html: '<div id="tab-container"></div><div id="content-container"></div><div id="go-message-board-icon-container"></div>',
         title_html: '<div class="title">吳怡賢</div>',
         tab_html: '<div class="tab"></div>',
-        goMessageBoardIcon_html: '<img id="messageboard" src="/resources/img/home/messageboardiconblack.png"/>',
+        goMessageBoardIcon_html: '<img src="/resources/img/home/messageBoardIconBlack.png"/>',
         tabs: [{tabName: "About", id: "about"}, {tabName: "Skill", id: "skill"}, {tabName: "Project", id: "project"}]
     }, jqueryMap = {
         $container: null,
@@ -37,7 +37,7 @@ home.shell = (function () {
 
     renderGoMessageBoardIcon = function () {
         var $icon = $(configMap.goMessageBoardIcon_html);
-        $icon.data("id", "messageboard");
+        $icon.data("id", "messageBoard");
         jqueryMap.$goMessageBoardIconContainer.html($icon);
     };
 
@@ -50,7 +50,6 @@ home.shell = (function () {
     onTabClick = function () {
         var $this = $(this);
         changeContent($this);
-
         $this.siblings().removeClass("active");
         $this.addClass("active");
         changeMessageBoardIcon(false);
@@ -65,9 +64,9 @@ home.shell = (function () {
 
     changeMessageBoardIcon = function (isActive) {
         if (isActive) {
-            jqueryMap.$goMessageBoardIconContainer.find("img").attr("src", "/resources/img/home/messageboardiconwhite.png");
+            jqueryMap.$goMessageBoardIconContainer.find("img").attr("src", "/resources/img/home/messageBoardIconWhite.png");
         } else {
-            jqueryMap.$goMessageBoardIconContainer.find("img").attr("src", "/resources/img/home/messageboardiconblack.png");
+            jqueryMap.$goMessageBoardIconContainer.find("img").attr("src", "/resources/img/home/messageBoardIconBlack.png");
         }
     };
 
