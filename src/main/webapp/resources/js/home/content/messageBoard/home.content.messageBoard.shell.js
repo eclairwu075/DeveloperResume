@@ -11,15 +11,21 @@ home.content.messageBoard.shell = (function () {
             '<div class="writing-wrapper"></div><div class="message-wrapper"></div></div>',
             writing_html: '<div class="title">Leave a message</div>' +
             '<div class="writing-container">' +
-            '<div class="name">name</div>' +
-            '<div class="content">comments...</div>' +
+
+            '<input class="name" maxlength="12" type="text" placeholder="name" />' +
+            '<textarea class="content" maxlength="150" placeholder="comments..." />' +
+
             '<button class="submit-btn">送出</button></div>' +
             '<div class="gray-block"></div>',
             message_html: '<div class="message-container">' +
             '<div class="name">Eclair Wu</div>' +
             '<div class="date">2019/6/12 08:20</div>' +
             '<div class="content">努力..加油...QQ</div>' +
-            '<button class="reply-btn">回覆</button>'
+            '<button class="reply-btn">回覆</button>',
+            getAllMessage_url: '/rest/message/findAll'
+        },
+        stateMap = {
+            allMessage: null
         }, init, jqueryMap = {
             $container: null,
             $messageBoardContainer: null,
@@ -45,11 +51,17 @@ home.content.messageBoard.shell = (function () {
         jqueryMap.$messageWrapper.html($message);
     };
 
+
     init = function ($container) {
         $container.html(configMap.main_html);
         setJqueryMap($container);
         renderWritingContainer();
-        renderMessageContainer();
+
+        $.get(configMap.getAllMessage_url).then(function (response) {
+            console.log(response);
+            renderMessageContainer();
+
+        });
     };
     return {init: init}
 })();

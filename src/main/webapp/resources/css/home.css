@@ -40,14 +40,19 @@ body {
         width: 200px;
         margin-bottom: 5px;
         background-color: #5a5b64;
-        color: gray;
-        padding-left: 10px; }
+        color: white;
+        padding-left: 10px;
+        border: 0;
+        font-size: 20px; }
       #home-container #content-container .message-board-container .writing-wrapper .writing-container .content {
         height: 150px;
         width: 800px;
         background-color: #5a5b64;
-        color: gray;
-        padding-left: 10px; }
+        color: white;
+        padding-left: 10px;
+        border: 0;
+        font-size: 20px;
+        resize: none; }
       #home-container #content-container .message-board-container .writing-wrapper .writing-container .submit-btn {
         position: absolute;
         bottom: 0;
