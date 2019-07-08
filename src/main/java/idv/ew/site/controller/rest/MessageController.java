@@ -3,11 +3,11 @@ package idv.ew.site.controller.rest;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import idv.ew.site.model.Message;
 import idv.ew.site.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by Eclair
@@ -27,9 +27,8 @@ public class MessageController {
         return objectMapper.valueToTree(messageService.findAll());
     }
 
-    @GetMapping(path = "/findAllAndIgnoreReply")
-    public JsonNode findAllAndIgnoreReply() {
-        return objectMapper.valueToTree(messageService.findAllAndIgnoreReply());
+    @PostMapping(path = "/addOne")
+    public JsonNode addOne(@RequestBody Message message) {
+        return objectMapper.valueToTree(messageService.addOne(message));
     }
-
 }

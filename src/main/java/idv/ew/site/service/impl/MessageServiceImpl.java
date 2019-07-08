@@ -24,15 +24,6 @@ public class MessageServiceImpl implements MessageService {
         return messageRepository.findAll();
     }
 
-    @Override
-    public List<Message> findAllAndIgnoreReply() {
-        List<Message> messages = messageRepository.findAll();
-//        for (Message message : messages) {
-//            message.setReplies(null);
-//        }
-        return messages;
-    }
-
     //新增message
     @Override
     public Message addOne(Message message) {

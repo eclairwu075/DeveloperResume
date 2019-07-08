@@ -14,8 +14,6 @@ public interface MessageService {
     //查詢所有message
     List<Message> findAll();
 
-    List<Message> findAllAndIgnoreReply();
-
     //新增message
     Message addOne(Message message);
 

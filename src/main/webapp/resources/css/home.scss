@@ -7,6 +7,10 @@ body {
 #home-container {
     width: 950px;
     margin: auto;
+    button {
+        border-radius: 5px;
+        z-index: 1;
+    }
     #tab-container {
         display: flex;
         font-size: 30px;
@@ -26,18 +30,27 @@ body {
             }
         }
     }
-    #content-container {
-        border: 1px solid;
-        height: 500px;
-        padding: 10px;
-        @import "messageBoard";
-    }
     #go-message-board-icon-container {
         position: fixed;
         bottom: 30px;
         right: 10px;
         img {
             width: 48px;
+        }
+    }
+    #content-container {
+        border: 1px solid;
+        min-height: 500px;
+        padding: 10px;
+        @import "messageBoard";
+        .about-container {
+            .left-part{
+                margin-right:10px;
+                display:inline-block;
+            }
+            .right-part{
+                display:inline-block;
+            }
         }
     }
 

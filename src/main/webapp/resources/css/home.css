@@ -6,6 +6,9 @@ body {
 #home-container {
   width: 950px;
   margin: auto; }
+  #home-container button {
+    border-radius: 5px;
+    z-index: 1; }
   #home-container #tab-container {
     display: flex;
     font-size: 30px;
@@ -21,9 +24,15 @@ body {
       padding-top: 50px; }
       #home-container #tab-container .tab.active {
         color: white; }
+  #home-container #go-message-board-icon-container {
+    position: fixed;
+    bottom: 30px;
+    right: 10px; }
+    #home-container #go-message-board-icon-container img {
+      width: 48px; }
   #home-container #content-container {
     border: 1px solid;
-    height: 500px;
+    min-height: 500px;
     padding: 10px; }
     #home-container #content-container .message-board-container .writing-wrapper .title {
       height: 65px;
@@ -65,23 +74,69 @@ body {
       padding: 10px;
       position: relative;
       border-bottom: 1px solid; }
+      #home-container #content-container .message-board-container .message-container:last-child {
+        border-bottom: none; }
       #home-container #content-container .message-board-container .message-container .name {
         display: inline; }
       #home-container #content-container .message-board-container .message-container .date {
         display: inline-block;
         margin-left: 50px;
-        font-size: 16px; }
+        font-size: 16px;
+        float: right; }
       #home-container #content-container .message-board-container .message-container .content {
         margin: 10px 0 0 0; }
       #home-container #content-container .message-board-container .message-container .reply-btn {
         position: absolute;
         right: 0;
         bottom: 10px; }
-  #home-container #go-message-board-icon-container {
-    position: fixed;
-    bottom: 30px;
-    right: 10px; }
-    #home-container #go-message-board-icon-container img {
-      width: 48px; }
+      #home-container #content-container .message-board-container .message-container .cancel-btn {
+        position: absolute;
+        right: 0;
+        bottom: 10px; }
+      #home-container #content-container .message-board-container .message-container .reply-container {
+        padding: 10px;
+        margin: 0 50px 0 50px;
+        position: relative;
+        border-bottom: 1px solid; }
+        #home-container #content-container .message-board-container .message-container .reply-container:last-child {
+          border-bottom: none; }
+        #home-container #content-container .message-board-container .message-container .reply-container .name {
+          display: inline; }
+        #home-container #content-container .message-board-container .message-container .reply-container .date {
+          display: inline-block;
+          margin-left: 50px;
+          font-size: 16px;
+          float: right; }
+        #home-container #content-container .message-board-container .message-container .reply-container .content {
+          margin: 10px 0 0 0; }
+      #home-container #content-container .message-board-container .message-container .reply-input {
+        padding: 10px 50px 0 50px; }
+        #home-container #content-container .message-board-container .message-container .reply-input .name {
+          height: 30px;
+          width: 200px;
+          background-color: #5a5b64;
+          color: white;
+          padding-left: 10px;
+          border: 0;
+          font-size: 20px; }
+        #home-container #content-container .message-board-container .message-container .reply-input .content {
+          height: 90px;
+          width: 800px;
+          margin-top: 5px;
+          background-color: #5a5b64;
+          color: white;
+          padding-left: 10px;
+          border: 0;
+          font-size: 20px;
+          resize: none; }
+        #home-container #content-container .message-board-container .message-container .reply-input .submit-btn {
+          position: absolute;
+          bottom: 50px;
+          right: 0; }
+    #home-container #content-container .about-container .left-part {
+      margin-right: 10px;
+      display: inline-block; }
+    #home-container #content-container .about-container .right-part {
+      display: inline-block; }
 
 /*# sourceMappingURL=home.css.map */

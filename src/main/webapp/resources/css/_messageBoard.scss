@@ -8,11 +8,9 @@
             font-size: 28px;
             font-weight: bold;
         }
-
         .writing-container {
             position: relative;
             padding: 10px 0 0 30px;
-
             .name {
                 height: 30px;
                 width: 200px;
@@ -39,7 +37,6 @@
                 right: 0;
             }
         }
-
         .gray-block {
             height: 20px;
             margin: 10px 0 10px 0;
@@ -50,6 +47,9 @@
         padding: 10px;
         position: relative;
         border-bottom: 1px solid;
+        &:last-child {
+            border-bottom: none;
+        }
         .name {
             display: inline;
         }
@@ -57,6 +57,7 @@
             display: inline-block;
             margin-left: 50px;
             font-size: 16px;
+            float: right;
         }
         .content {
             margin: 10px 0 0 0;
@@ -65,6 +66,61 @@
             position: absolute;
             right: 0;
             bottom: 10px;
+        }
+        .cancel-btn {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+        .reply-container {
+            padding: 10px;
+            margin: 0 50px 0 50px;
+            position: relative;
+            border-bottom: 1px solid;
+            &:last-child {
+                border-bottom: none;
+            }
+            .name {
+                display: inline;
+            }
+            .date {
+                display: inline-block;
+                margin-left: 50px;
+                font-size: 16px;
+                float: right;
+            }
+            .content {
+                margin: 10px 0 0 0;
+            }
+        }
+        .reply-input {
+            //margin: 0 50px 0 50px;
+            padding: 10px 50px 0 50px;
+            .name {
+                height: 30px;
+                width: 200px;
+                background-color: #5a5b64;
+                color: white;
+                padding-left: 10px;
+                border: 0;
+                font-size: 20px;
+            }
+            .content {
+                height: 90px;
+                width: 800px;
+                margin-top: 5px;
+                background-color: #5a5b64;
+                color: white;
+                padding-left: 10px;
+                border: 0;
+                font-size: 20px;
+                resize: none;
+            }
+            .submit-btn {
+                position: absolute;
+                bottom: 50px;
+                right: 0;
+            }
         }
     }
 }
