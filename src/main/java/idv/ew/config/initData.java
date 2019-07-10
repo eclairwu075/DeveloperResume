@@ -30,17 +30,13 @@ public class initData {
         Boolean isCreate = environment.getProperty("spring.jpa.hibernate.ddl-auto").equals("create");
         if (isCreate) {
             List<Message> messages = Arrays.asList(
-                new Message("Annie", "留言板是不是有點空阿？", Arrays.asList(
-                    new Reply("Tom", "yeah"),
-                    new Reply("Annie", "yeah?"),
-                    new Reply("Jim", "一一一一二二二二三三三三四四四四五五五五六六六六七七七七八八八八九九九九十十十十"),
-                    new Reply("Tom", "很空很空很空很空"),
-                    new Reply("Jim", "+1"),
-                    new Reply("Annie", "k")
+                new Message("Annie", "留言板測試唷！留言要長一點比較好看唷！", Arrays.asList(
+                    new Reply("Tom", "嘟嘟嚕～嘟嘟嚕～DDD～嘟嘟嚕～這樣夠長嗎？O_O"),
+                    new Reply("Annie", ">_<ㄛ嗯ah")
                 )),
-                new Message("Jim", "功能先這樣就好嗎?", Arrays.asList(
-                    new Reply("Jim", "沒人理我@@"),
-                    new Reply("Tom", "kkkk")
+                new Message("Jim", "Spring框架是 Java 平台的一個開源的全棧（Full-stack）應用程式框架和控制反轉容器實現，一般被直接稱為 Spring。", Arrays.asList(
+                    new Reply("Tom", "@@"),
+                    new Reply("Jim", "該框架的一些核心功能理論上可用於任何 Java 應用，但 Spring 還為基於Java企業版平台構建的 Web 應用提供了大量的拓展支援。")
                 ))
             );
             for (Message message : messages) {

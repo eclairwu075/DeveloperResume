@@ -40,16 +40,52 @@ body {
     }
     #content-container {
         border: 1px solid;
-        min-height: 500px;
+        //min-height: 500px;
         padding: 10px;
+        font-size: 20px;
         @import "messageBoard";
-        .about-container {
-            .left-part{
-                margin-right:10px;
-                display:inline-block;
+        .about-container, .skill-container, .project-container {
+            margin: 30px;
+            text-align: center;
+            line-height: 35px;
+            a, &:visited {
+                color: #ffc78e;
             }
-            .right-part{
-                display:inline-block;
+            .left-part {
+                margin-right: 40px;
+                display: inline-block;
+                text-align: left;
+                width: 100px;
+            }
+            .right-part {
+                display: inline-block;
+                text-align: left;
+                width: 400px;
+            }
+            .project-div {
+                margin-top: 40px;
+                text-align: left;
+                position: relative;
+                .title {
+                    font-size: 25px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    span {
+                        font-weight: normal;
+                        font-size: 18px;
+                    }
+                }
+                ul {
+                    list-style-type: none;
+                    margin: 7px 0;
+                }
+
+                img {
+                    width: 300px;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
             }
         }
     }

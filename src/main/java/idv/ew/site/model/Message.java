@@ -25,7 +25,7 @@ public class Message extends BaseEntity {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "content", nullable = false)
+    @Column(name = "content", nullable = false, columnDefinition = "nvarchar(MAX)")
     private String content;
 
     @OneToMany(mappedBy = "message", cascade = CascadeType.ALL)

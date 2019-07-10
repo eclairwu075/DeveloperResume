@@ -27,7 +27,8 @@ home.content.shell = (function () {
     init = function ($container) {
         $container.html(configMap.main_html);
         setJqueryMap($container);
-        //changeContentByKey("about");
+        //一進來就到about
+        changeContentByKey("about");
     };
 
     return {

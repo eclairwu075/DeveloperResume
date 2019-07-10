@@ -32,8 +32,8 @@ body {
       width: 48px; }
   #home-container #content-container {
     border: 1px solid;
-    min-height: 500px;
-    padding: 10px; }
+    padding: 10px;
+    font-size: 20px; }
     #home-container #content-container .message-board-container .writing-wrapper .title {
       height: 65px;
       background-color: gray;
@@ -133,10 +133,39 @@ body {
           position: absolute;
           bottom: 50px;
           right: 0; }
-    #home-container #content-container .about-container .left-part {
-      margin-right: 10px;
-      display: inline-block; }
-    #home-container #content-container .about-container .right-part {
-      display: inline-block; }
+    #home-container #content-container .about-container, #home-container #content-container .skill-container, #home-container #content-container .project-container {
+      margin: 30px;
+      text-align: center;
+      line-height: 35px; }
+      #home-container #content-container .about-container a, #home-container #content-container .about-container:visited, #home-container #content-container .skill-container a, #home-container #content-container .skill-container:visited, #home-container #content-container .project-container a, #home-container #content-container .project-container:visited {
+        color: #ffc78e; }
+      #home-container #content-container .about-container .left-part, #home-container #content-container .skill-container .left-part, #home-container #content-container .project-container .left-part {
+        margin-right: 40px;
+        display: inline-block;
+        text-align: left;
+        width: 100px; }
+      #home-container #content-container .about-container .right-part, #home-container #content-container .skill-container .right-part, #home-container #content-container .project-container .right-part {
+        display: inline-block;
+        text-align: left;
+        width: 400px; }
+      #home-container #content-container .about-container .project-div, #home-container #content-container .skill-container .project-div, #home-container #content-container .project-container .project-div {
+        margin-top: 40px;
+        text-align: left;
+        position: relative; }
+        #home-container #content-container .about-container .project-div .title, #home-container #content-container .skill-container .project-div .title, #home-container #content-container .project-container .project-div .title {
+          font-size: 25px;
+          font-weight: bold;
+          margin-bottom: 5px; }
+          #home-container #content-container .about-container .project-div .title span, #home-container #content-container .skill-container .project-div .title span, #home-container #content-container .project-container .project-div .title span {
+            font-weight: normal;
+            font-size: 18px; }
+        #home-container #content-container .about-container .project-div ul, #home-container #content-container .skill-container .project-div ul, #home-container #content-container .project-container .project-div ul {
+          list-style-type: none;
+          margin: 7px 0; }
+        #home-container #content-container .about-container .project-div img, #home-container #content-container .skill-container .project-div img, #home-container #content-container .project-container .project-div img {
+          width: 300px;
+          position: absolute;
+          right: 0;
+          bottom: 0; }
 
 /*# sourceMappingURL=home.css.map */

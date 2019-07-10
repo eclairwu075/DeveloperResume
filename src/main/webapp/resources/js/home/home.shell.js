@@ -31,6 +31,10 @@ home.shell = (function () {
             var $tab = $(configMap.tab_html);
             $tab.data("id", tab.id);
             $tab.html(tab.tabName);
+            //一進來預設在about的tab
+            if (tab.id == "about") {
+                $tab.addClass("active");
+            }
             jqueryMap.$tabContainer.append($tab);
         })
     };
@@ -82,7 +86,8 @@ home.shell = (function () {
         renderTab();
         home.content.shell.init(jqueryMap.$contentContainer);
         renderGoMessageBoardIcon();
-        jqueryMap.$tabContainer.on("click", ".title", onTitleClick);
+        //取消title的click事件
+        //jqueryMap.$tabContainer.on("click", ".title", onTitleClick);
         jqueryMap.$tabContainer.on("click", ".tab", onTabClick);
         jqueryMap.$goMessageBoardIconContainer.on("click", "img", onImgClick);
     };

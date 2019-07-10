@@ -22,10 +22,10 @@ public class Reply extends BaseEntity {
         this.content = content;
     }
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "content")
+    @Column(name = "content", nullable = false, columnDefinition = "nvarchar(MAX)")
     private String content;
 
     @ManyToOne

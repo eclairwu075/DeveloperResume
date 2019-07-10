@@ -10,7 +10,7 @@ home.content.messageBoard.shell = (function () {
             writing_html: '<div class="title">Leave a message</div>' +
             '<div class="writing-container">' +
             '<input class="name" maxlength="12" type="text" placeholder="name" />' +
-            '<textarea class="content" maxlength="150" placeholder="comments..." />' +
+            '<textarea class="content" maxlength="250" placeholder="comments..." />' +
             '<button class="submit-btn">送出</button></div>' +
             '<div class="gray-block"></div>',
             message_html: '<div class="message-container">' +
