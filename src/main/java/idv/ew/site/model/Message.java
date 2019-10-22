@@ -16,9 +16,13 @@ public class Message extends BaseEntity {
     public Message() {
     }
 
-    public Message(String name, String content, List<Reply> replies) {
+    public Message(String name, String content) {
         this.name = name;
         this.content = content;
+    }
+
+    public Message(String name, String content, List<Reply> replies) {
+        this(name,content);
         this.replies = replies;
     }
 
