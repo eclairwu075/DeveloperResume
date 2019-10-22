@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,9 +29,9 @@ public class initData {
         Boolean isCreate = environment.getProperty("spring.jpa.hibernate.ddl-auto").equals("create");
         if (isCreate) {
             List<Message> messages = Arrays.asList(
-                new Message("Annie", "留言板測試唷！留言要長一點比較好看唷！", Arrays.asList(
-                    new Reply("Tom", "嘟嘟嚕～嘟嘟嚕～DDD～嘟嘟嚕～這樣夠長嗎？O_O"),
-                    new Reply("Annie", ">_<ㄛ嗯ah")
+                new Message("Annie", "留言板測試唷！測試測試測試測試測試唷！", Arrays.asList(
+                    new Reply("Tom", "嘟嘟嚕～嘟嘟嚕～DDD～嘟嘟嚕～？O_O"),
+                    new Reply("Annie", ">_<ㄛ嗯kk")
                 )),
                 new Message("Jim", "Spring框架是 Java 平台的一個開源的全棧（Full-stack）應用程式框架和控制反轉容器實現，一般被直接稱為 Spring。", Arrays.asList(
                     new Reply("Tom", "@@"),
