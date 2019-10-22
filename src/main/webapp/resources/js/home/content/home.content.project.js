@@ -11,7 +11,7 @@ home.content.project = (function () {
         '<div class="project-div">' +
         '<div class="title">DeveloperResume <span>( 2019 )</span></div>' +
         '<div>簡單自我介紹的網頁，右下角有留言版功能。</div>' +
-        '<div><a href="http://devresume.southeastasia.cloudapp.azure.com/">http://devresume.southeastasia.cloudapp.azure.com/</a></div>' +
+        '<div><a href="xxx">https://mylink.com/</a></div>' +
         '<div>使用：</div>' +
         '<ul><li>前端：jQuery、Scss</li>' +
         '<li>後端：Java、Spring Boot、Restful</li>' +
